@@ -9,6 +9,14 @@ resource "aws_instance" "WebServer1" {
 
   key_name = "my-ec2-key"
 
+  user_data = <<-EOF
+              #!/bin/bash
+              yum update -y
+              yum install httpd -y
+              systemctl start httpd
+              systemctl enable httpd
+              EOF
+
   tags = {
     Name = "WebServer1"
   }
