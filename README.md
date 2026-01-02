@@ -1,5 +1,32 @@
 ## Create a Variable.tf file:
 In this file, specify all credentials and always add this file to .gitignore before pushing to github
+```
+/*
+variable "region" {
+  default = "us-east-1"
+}
+
+variable "accesskey" {
+  default = "AKIAQV6DOBG5D2NF3QGH"
+}
+
+variable "secretkey" {
+  default = "/JbImdXWmmtQmU3Q2qx1RZxNXthbs12tlA8twRVo"
+}
+
+variable "dbname" {
+  default = "appdatabase"
+}
+
+variable "username" {
+  default = "admin"
+}
+
+variable "password" {
+  default = "db*pass123"
+}
+*/
+```
 
 - Region
 - AWS access key
